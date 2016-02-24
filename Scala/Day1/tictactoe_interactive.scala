@@ -28,14 +28,14 @@ class TicTacToe() {
       val row = scala.io.StdIn.readChar.asDigit
 
       if(!isValidRowOrColumn(row)) {
-        println("Quit screwing around! The only valid rows are 0, 1, and 2")
+        println("Quit screwing around! The only valid rows are 1, 2, and 3")
         tryAgain = true
       } else {
         println("Pick a column: ")
         val column = scala.io.StdIn.readChar.asDigit
 
         if(!isValidRowOrColumn(column)) {
-          println("Quit screwing around! The only valid columns are 0, 1, and 2")
+          println("Quit screwing around! The only valid columns are 1, 2, and 3")
           tryAgain = true
         } else {
           if(board((column - 1) + ((row - 1) * 3)) != '_') {
