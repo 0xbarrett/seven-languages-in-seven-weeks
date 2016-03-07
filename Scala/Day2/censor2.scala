@@ -8,7 +8,7 @@ trait Censor {
        val substitutions = Map("Shoot" -> "Pucky", "Darn" -> "Beans")
 
        substitutions.foldLeft(toString) {
-          case (s, (k, v)) => s.replaceAll(k, v)
+          case (string, (key, value)) => string.replaceAll(key, value)
        }
    }
 }

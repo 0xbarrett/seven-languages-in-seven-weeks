@@ -2,7 +2,7 @@
 
 object StringListSize {
    def getListSize(list: List[String]): Int = {
-      (0 /: list) {(sum, i) => sum + i.size}
+         (0 /: list) {(sum, i) => sum + i.size}
    }
 }
 
