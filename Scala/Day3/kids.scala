@@ -1,0 +1,36 @@
+import scala.actors._
+import scala.actors.Actor._
+
+case object Poke
+case object Feed
+case object End
+
+class Kid() extends Actor {
+  def act() {
+    loop {
+      react {
+        case Poke => {
+          println("Ow...")
+          println("Quit it...")
+        }
+        case Feed => {
+          println("Gurgle...")
+          println("Burp...")
+        }
+        case End => {
+          exit()
+        }
+      }
+    }
+  }
+}
+
+var bart = new Kid().start
+var lisa = new Kid().start
+println("Ready to poke and feed...")
+bart ! Poke
+lisa ! Poke
+bart ! Feed
+lisa ! Feed
+bart ! End
+lisa ! End
