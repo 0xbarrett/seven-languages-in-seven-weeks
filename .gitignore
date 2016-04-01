@@ -5,3 +5,4 @@ Ruby/.idea/Ruby.iml
 Ruby/.idea/vcs.xml
 Ruby/.idea/workspace.xml
 encodings.xml
+*.beam
