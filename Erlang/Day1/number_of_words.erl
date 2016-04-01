@@ -1,10 +1,10 @@
 -module(number_of_words).
 -export([get/1]).
 
-count([], Count) -> Count;
-count([" ", " "], Count) -> Count;
-count([" ", " "| Tail], Count) -> count(Tail, Count);
-count([" " | Tail], Count) -> count(Tail, Count + 1);
-count([Head | Tail], Count) -> count(Tail, Count).
+aux([]) -> 0;
+aux(" ") -> 0;
+aux([$ , $ |Tail]) -> aux(" " ++ Tail);
+aux([$ |Tail]) -> 1 + aux(Tail);
+aux([_|Tail]) -> aux(Tail).
 
-get(String) -> count(String, 0).
+get(S) -> aux(" " ++ S).
