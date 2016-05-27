@@ -6,3 +6,4 @@ Ruby/.idea/vcs.xml
 Ruby/.idea/workspace.xml
 encodings.xml
 *.beam
+Clojure/target
