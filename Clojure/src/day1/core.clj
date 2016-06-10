@@ -1,4 +1,5 @@
-(ns day1.core)
+(ns day1.core
+  (:gen-class))
 
 (defn foo
   "I don't do a whole lot."
